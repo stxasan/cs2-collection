@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d14">
+
+  <title>CS2 Collection — stxasan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="#">CS2<span>COLLECTION</span></a>
+
+    <a
+      class="player-nick"
+      href="https://steamcommunity.com/profiles/76561199228391178/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >stxasan</a>
+
+    <div class="status">MY SKIN ARCHIVE</div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL ARMORY</p>
+      <h1>Моя коллекция <span>CS2</span></h1>
+      <p class="subtitle">Каждый скин — часть твоей истории.</p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Собрано</span>
+          <strong id="owned-count">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span>В каталоге</span>
+          <strong id="total-count">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span>Прогресс</span>
+          <strong id="progress">0%</strong>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow">THE ARMORY</p>
+          <h2>Мой арсенал</h2>
+        </div>
+
+        <div class="catalog-controls">
+          <input
+            id="search"
+            type="search"
+            placeholder="Найти скин..."
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            name="skin-catalog-search"
+            aria-label="Поиск скинов"
+          >
+
+          <label class="filter-toggle">
+            <input id="owned-only" type="checkbox">
+            Только мои скины
+          </label>
+        </div>
+      </div>
+
+      <h3 class="filter-title">ТИП ОРУЖИЯ</h3>
+      <nav
+        id="weapon-tabs"
+        class="tabs"
+        aria-label="Фильтр по типу оружия"
+      ></nav>
+
+      <h3 class="filter-title">РЕДКОСТЬ И ТИП СКИНА</h3>
+      <nav
+        id="category-tabs"
+        class="tabs"
+        aria-label="Фильтр по редкости и типу скина"
+      ></nav>
+
+      <div id="category-stats" class="category-stats"></div>
+
+      <div class="bulk-controls">
+        <button type="button" id="select-all-skins" class="bulk-btn">
+          ✓ Отметить все
+        </button>
+
+        <button type="button" id="deselect-all-skins" class="bulk-btn">
+          ✕ Убрать все
+        </button>
+      </div>
+
+      <div id="skin-grid" class="skin-grid"></div>
+
+      <p
+        id="empty-message"
+        class="empty-message"
+        role="status"
+        aria-live="polite"
+      ></p>
+    </section>
+
+  </main>
+
+  <footer>CS2 COLLECTION · FACTORY NEW ARCHIVE</footer>
+
+  <button
+    type="button"
+    id="back-to-top"
+    aria-label="Прокрутить страницу вверх"
+    title="Наверх"
+  >↑</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
